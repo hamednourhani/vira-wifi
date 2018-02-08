@@ -1,0 +1,96 @@
+$icon-font-path: '../fonts/';
+
+
+// bower:scss
+@import "bower_components/susy/sass/_susy.scss";
+@import "bower_components/sassy-maps/sass/_sassy-maps.scss";
+@import "bower_components/breakpoint-sass/stylesheets/_breakpoint.scss";
+@import "bower_components/compass-sass-mixins/lib/_compass.sass";
+// endbower
+$xsmall: 20em;
+$small: 30em;
+$xmedium: 34em;
+$xxmedium: 40em;
+$medium: 45em;
+$mediumplus: 54em;
+$larg: 65em;
+$xlarge: 90em;
+
+
+$susy: (
+  columns: 12, 
+  math : fluid,
+  gutters : 1/4,
+  output : float,
+  gutter-position: inside,
+  global-box-sizing: content-box,
+  flow : rtl,
+  debug: (image: show-columns),
+  );
+$gol: #ff585b;
+$green: #3bbb5a;
+$blue: #0484ff;
+$semiBlue: #00d3f2;
+$grey3: #4e4e4e;
+$grey2: #e6e7e7;
+$grey1: #f2f2f2;
+$red: #ff3300;
+$orange: #e47a26;
+$black3: #1c1c1c;
+$black2: #282828;
+$black1: #111;
+$prink_purple: #7e66b9;
+$white: #ffffff;
+$white2: #f8f8f8;
+$glassyBlack: rgba(44, 35, 40, 0.85);
+$glassyWhite: rgba(255, 255, 255, 0.85);
+
+$purple: #7e66b9;
+$skyblue: #3f93f3;
+
+
+$star-deactive: #ffdb98;
+$star-active: #f90;
+
+$max-content-width : 960px;
+/*----------------transition-shadow----------------------*/
+
+.def-transition {
+	@include single-transition(all, 0.4s, ease-in-out);
+}
+
+/*----------------box-shadow----------------------*/
+
+.def-box-shadow {
+	@include box-shadow(0px 0px 7px $grey2);
+}
+
+.dark-box-shadow {
+	@include box-shadow(0px 0px 5px darken($grey3, 10%));
+}
+
+.gol-box-shadow {
+	@include box-shadow(0px 0px 8px $gol);
+}
+
+.def-text-shadow {
+	$darkenBlue: darken($blue, 15%);
+	color: darken($blue, 8%);
+	text-shadow: inset 1px 4px 6px $darkenBlue, inset 0 0 0 $black2, inset 1px 4px 6px $darkenBlue;
+}
+.no-box-shadow {
+	@include box-shadow(0px 0px 0px rgba(0,0,0,0));
+}
+
+.no-outline {
+	outline: none;
+	border: 0px;
+}
+
+
+.testing {
+  @include span(12);
+}
+.test{
+  @include border-radius(10px);
+}
