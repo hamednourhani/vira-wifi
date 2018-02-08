@@ -2,10 +2,10 @@ $icon-font-path: '../fonts/';
 
 
 // bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "bower_components/susy/sass/_susy.scss";
 @import "bower_components/sassy-maps/sass/_sassy-maps.scss";
 @import "bower_components/breakpoint-sass/stylesheets/_breakpoint.scss";
-@import "bower_components/compass-sass-mixins/lib/_compass.sass";
 // endbower
 $xsmall: 20em;
 $small: 30em;
