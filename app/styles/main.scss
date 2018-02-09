@@ -2,12 +2,10 @@
 @import "../../bower_components/sassy-maps/sass/_sassy-maps.scss";
 @import "../../bower_components/breakpoint-sass/stylesheets/_breakpoint.scss";
 @import "../../bower_components/compass-sass-mixins/lib/_compass.sass";
-
 @import "fonts";
 @import "variable";
 @import "base";
 @import "fontawesome/fontawesome.scss";
-
 
 .body-wrapper {
   max-width: 1140px;
@@ -147,20 +145,212 @@ a {
   background: none;
   min-height: 400px;
   .col-right {
-    min-hight: 400px;
+    min-height: 400px;
     @include background(url("/images/video-background.jpg") no-repeat center center);
     @include background-size("cover");
     a {
-      width : 100%;
-      height : 100%;
+      @extend .def-transition;
+      width: 100%;
+      height: 100%;
       display: block;
       min-height: 400px;
-      img{
-        margin : auto;
+      position: relative;
+
+      .icon-container {
+        height: 80px;
+        width: 80px;
+        display: inline-block;
+        position: absolute;
+        top: calc(50% - 40px);
+        left: calc(50% - 40px);
+        i {
+          @extend .def-transition;
+          color: $green;
+          font-size: 80px;
+        }
+      }
+      &:hover {
+        .icon-container {
+          i {
+            color: $white;
+          }
+        }
       }
     }
   }
   .col-left {
+    padding: 70px 50px 30px;
+    h3 {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 30px;
+      color: $green;
+    }
+    p {
+      text-align: justify;
+    }
+  }
+}
+
+.left-content-section {
+  @include container;
+  background: none;
+  min-height: 400px;
+  .col-right {
+    min-height: 400px;
+  }
+  .col-left {
+    padding: 70px 50px 30px;
+    h3 {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 30px;
+      color: $green;
+    }
+    p {
+      text-align: justify;
+    }
+  }
+}
+
+.right-content-section {
+  @include container;
+  background: none;
+  min-height: 400px;
+
+  .col-right {
+    padding: 70px 50px 30px;
+    h3 {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 30px;
+      color: $green;
+    }
+    p {
+      text-align: justify;
+    }
+  }
+  .col-left {
+    min-height: 400px;
 
   }
+}
+
+.section-one-background {
+  @include background(url("/images/section-one-background.jpg") no-repeat center center);
+  @include background-size("cover");
+}
+
+.section-two-background {
+  @include background(url("/images/section-two-background.jpg") no-repeat center center);
+  @include background-size("cover");
+}
+
+.section-three-background {
+  @include background(url("/images/section-three-background.jpg") no-repeat center center);
+  @include background-size("cover");
+}
+
+.support-section {
+  @include container;
+  background: none;
+  background-color: $black3;
+  border-bottom: 1px solid #777;
+  color: $white;
+  overflow: hidden;
+  .col-right {
+    padding: 30px;
+    height: 100%;
+
+  }
+  .col-left {
+    padding: 30px;
+    height: 100%;
+
+  }
+  .col-content {
+    width: calc(100% - 80px);
+    margin-right: 10px;
+    float: right;
+    h3 {
+      font-size: 22px;
+      font-weight: 400;
+      margin-bottom: 30px;
+      color : #ccc;
+    }
+    p {
+      text-align: justify;
+      color : #ccc;
+    }
+  }
+
+  img {
+    margin-top: 10px;
+    float: right;
+  }
+}
+
+.footer-section {
+  @include container;
+  background: none;
+  background-color: $black3;
+  color: $white;
+  overflow: hidden;
+  .col-right {
+    padding: 30px;
+
+  }
+  .col-left {
+    padding: 30px;
+
+  }
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color : #999;
+  }
+  p {
+    font-size: 14px;
+    text-align: justify;
+    color : #999;
+  }
+  .footer-icon-container{
+    ul{
+      padding : 5px;
+      li{
+        margin-right: 8px;
+        display: inline-block;
+        a{
+          color : #999;
+          i{
+            font-size:40px;
+          }
+          &:hover{
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  .footer-menu-container {
+    @include container;
+    background: none;
+    .footer-menu {
+      margin-top : 20px;
+      @include span(4);
+      ul {
+        padding : 10px;
+        li {
+          a{
+            color : #999;
+            &:hover{
+              color : $white;
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
