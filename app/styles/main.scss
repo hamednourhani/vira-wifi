@@ -7,18 +7,33 @@
 @import "base";
 @import "fontawesome/fontawesome.scss";
 
+html {
+  min-width: 360px;
+}
+
+body {
+  min-width: 360px;
+}
+
 .body-wrapper {
   max-width: 1140px;
+  min-width: 360px;
   margin: auto;
   background-color: #fff;
 }
 
 .col-left {
-  @include span(6);
+  @include span(12);
+  @include susy-breakpoint($medium) {
+    @include span(6);
+  }
 }
 
 .col-right {
-  @include span(6);
+  @include span(12);
+  @include susy-breakpoint($medium) {
+    @include span(6);
+  }
 }
 
 a {
@@ -67,16 +82,26 @@ a {
   }
 
   .col-left {
-    text-align: left;
-  }
-
-  .logo-container {
-    max-width: 100%;
-    width: 200px;
-    margin: 10px 25px;
-    img {
-      max-width: 100%;
+    text-align: center;
+    @include susy-breakpoint($medium) {
+      text-align: left;
     }
+  }
+  .col-right {
+    .logo-container {
+      text-align: center;
+      margin: 10px 25px;
+      img {
+        max-width: 200px;
+      }
+    }
+    @include susy-breakpoint($medium) {
+      text-align: right;
+      .logo-container {
+        text-align: right;
+      }
+    }
+
   }
 
   ul.menu-list {
@@ -132,10 +157,15 @@ a {
     margin-bottom: 50px;
   }
   .product-feature {
-    @include span(2);
+    @include span(4);
+    margin-bottom: 40px;
     text-align: center;
     img {
       margin-bottom: 10px;
+    }
+    @include susy-breakpoint($medium) {
+      @include span(2);
+      margin-bottom: 0px;
     }
   }
 }
@@ -219,6 +249,7 @@ a {
   min-height: 400px;
 
   .col-right {
+    float: right;
     padding: 70px 50px 30px;
     h3 {
       font-size: 28px;
@@ -231,6 +262,7 @@ a {
     }
   }
   .col-left {
+    float: left;
     min-height: 400px;
 
   }
@@ -276,11 +308,11 @@ a {
       font-size: 22px;
       font-weight: 400;
       margin-bottom: 30px;
-      color : #ccc;
+      color: #ccc;
     }
     p {
       text-align: justify;
-      color : #ccc;
+      color: #ccc;
     }
   }
 
@@ -308,25 +340,25 @@ a {
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 30px;
-    color : #999;
+    color: #999;
   }
   p {
     font-size: 14px;
     text-align: justify;
-    color : #999;
+    color: #999;
   }
-  .footer-icon-container{
-    ul{
-      padding : 5px;
-      li{
+  .footer-icon-container {
+    ul {
+      padding: 5px;
+      li {
         margin-right: 8px;
         display: inline-block;
-        a{
-          color : #999;
-          i{
-            font-size:40px;
+        a {
+          color: #999;
+          i {
+            font-size: 40px;
           }
-          &:hover{
+          &:hover {
             color: $white;
           }
         }
@@ -337,15 +369,15 @@ a {
     @include container;
     background: none;
     .footer-menu {
-      margin-top : 20px;
+      margin-top: 20px;
       @include span(4);
       ul {
-        padding : 10px;
+        padding: 10px;
         li {
-          a{
-            color : #999;
-            &:hover{
-              color : $white;
+          a {
+            color: #999;
+            &:hover {
+              color: $white;
             }
           }
         }
