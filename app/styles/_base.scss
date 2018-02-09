@@ -12,10 +12,11 @@ body {
 	color: #333;
 	font-family: $yekan;
 	font-weight: 400;
+  font-size : 16px;
 	direction: rtl;
 	margin: 0px;
 	overflow: auto;
-	background: #fff;
+	background: #eee;
 	&.stopScroll {
 		overflow: hidden;
 	}

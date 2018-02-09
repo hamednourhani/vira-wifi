@@ -18,7 +18,7 @@ $xlarge: 90em;
 
 
 $susy: (
-  columns: 12, 
+  columns: 12,
   math : fluid,
   gutters : 1/4,
   output : float,
@@ -28,15 +28,15 @@ $susy: (
   debug: (image: show-columns),
   );
 $gol: #ff585b;
-$green: #3bbb5a;
+$green: #9dbeaa;
 $blue: #0484ff;
 $semiBlue: #00d3f2;
 $grey3: #4e4e4e;
 $grey2: #e6e7e7;
 $grey1: #f2f2f2;
-$red: #ff3300;
+$red: #a82223;
 $orange: #e47a26;
-$black3: #1c1c1c;
+$black3: #333;
 $black2: #282828;
 $black1: #111;
 $prink_purple: #7e66b9;
@@ -88,9 +88,3 @@ $max-content-width : 960px;
 }
 
 
-.testing {
-  @include span(12);
-}
-.test{
-  @include border-radius(10px);
-}
