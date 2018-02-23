@@ -65,6 +65,10 @@ a {
       background-color: lighten($green, 10%);
     }
   }
+
+  &.download-link {
+    padding: 0px;
+  }
 }
 
 .menu {
@@ -142,6 +146,82 @@ a {
 
 }
 
+.pricing-banner {
+  padding: 40px;
+  background: #efefef;
+  .pricing-inner {
+    @include container;
+    min-height: 400px;
+    background: none;
+    .col-left {
+      @include background(url("/images/thumb-on-wall-bronze-02.jpg"), no-repeat center center);
+      @include background-size("cover");
+      min-height: 400px;
+    }
+    .col-right {
+      padding: 30px;
+      h1 {
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        margin-top: 0px;
+        color: #000;
+      }
+
+      h3 {
+        font-size: 20px;
+        color: $green;
+        font-weight: 100;
+        margin-bottom: 10px;
+      }
+      p {
+        text-align: justify;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        display: block;
+        padding: 20px;
+      }
+      a {
+        margin: 5px;
+      }
+      .price {
+        color: #333;
+        font-size: 30px;
+        font-weight: 600;
+      }
+    }
+  }
+
+}
+
+.free-app {
+  @include container;
+  border-bottom: 1px solid #ccc;
+  min-height: 400px;
+  background: none;
+  .col-right {
+    @include background(url("/images/free-app_girl.jpg"), no-repeat center center);
+    @include background-size("cover");
+    min-height: 400px;
+  }
+  .col-left {
+    padding: 30px;
+    h3 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: $green;
+    }
+    p {
+      text-align: justify;
+    }
+    a {
+      margin: 5px;
+    }
+  }
+
+}
+
 .product-features {
   @include container;
   border-bottom: 1px solid #ccc;
@@ -166,6 +246,34 @@ a {
     @include susy-breakpoint($medium) {
       @include span(2);
       margin-bottom: 0px;
+    }
+  }
+
+  &.pricing-page-features {
+    h3 {
+      font-size: 26px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 50px;
+      color: #000;
+    }
+    p {
+      display: block;
+      padding-top: 5px;
+      font-size: 16px;
+      color: #999;
+    }
+    .product-feature {
+      @include span(6);
+      margin-bottom: 40px;
+      text-align: center;
+      img {
+        margin-bottom: 10px;
+        max-width: 80px;
+      }
+      @include susy-breakpoint($medium) {
+        @include span(4);
+      }
     }
   }
 }
